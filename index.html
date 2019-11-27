@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>When Do I Go Home?</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1>calculate</h1>
+    <form>
+        <div class="arrival">
+            <label for="arrival">Arrived at: </label>
+            <input id="arrival" type="time" required>
+        </div>
+
+        <div class="lunch">
+            <label for="lunch">Lunch Break (in minutes)</label>
+            <input id="lunch" type="number" min="0" requried>
+        </div>
+
+        <button>Calculate</button>
+    </form>
+
+    <div class="hidden" id="output">
+        <h2></h2>
+    </div>
+</body>
+<script type="text/javascript" src="./calculate.js"></script>
+</html>
