@@ -1,9 +1,14 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 
 let win
 
+// process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = 'production'
+
 function createWindow () {
     win = new BrowserWindow({
+        width: 500,
+        height: 400,
         webPreferences: {
             nodeIntegration: true
         }
@@ -11,14 +16,17 @@ function createWindow () {
     
     win.loadFile('index.html')
     
-    win.webContents.openDevTools()
-    
     win.on('closed', () => {
         win = null
     })
 }
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+    createWindow()
+    if (process.env.NODE_ENV === 'production') {
+        Menu.setApplicationMenu(null)
+    }
+})
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
