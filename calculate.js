@@ -9,18 +9,18 @@ form.addEventListener('submit', (e) => {
     const outputDiv = document.querySelector('#output')
     const output = document.querySelector('#output h2')
     
-    if (hoursWorked >= 100) {
-        output.textContent = 'Look at Mr. Worksalot over here'
-        return
-    
-    }
-    
     let timeArray = arrival.split(':')
+    
     let hour = timeArray[0]
     let workDuration = ((parseInt(timeArray[1]) + parseInt(lunch)) / 60) + parseFloat(hoursWorked)
     let hours = Math.floor(workDuration)
     let minutes = Math.round((workDuration % 1) * 60)
     let period = 'am'
+    
+    if (hours >= 24) {
+        output.textContent = 'Look at Mr. Worksalot over here'
+        return
+    }
     
     if (hour > 12) {
         period = 'pm'

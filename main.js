@@ -2,8 +2,8 @@ const { app, BrowserWindow, Menu } = require('electron')
 
 let win
 
-// process.env.NODE_ENV = 'development'
-process.env.NODE_ENV = 'production'
+process.env.NODE_ENV = 'development'
+// process.env.NODE_ENV = 'production'
 
 function createWindow () {
     win = new BrowserWindow({
