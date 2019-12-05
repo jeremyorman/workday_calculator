@@ -6,29 +6,29 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <h1>When do I go home?</h1>
-    <form>
-        <div class="arrival">
-            <label for="arrival">Arrived at: </label>
-            <input id="arrival" type="time" required>
-        </div>
-
-        <div class="lunch">
-            <label for="lunch">Lunch Break (minutes): </label>
-            <input id="lunch" type="number" min="0" requried>
-        </div>
-
-        <div class="hoursWorked">
-            <label for="hoursWorked">Hours Worked: </label>
-            <input id="hoursWorked" type="number" min="0" value="8" step="0.01" required>
-        </div>
-
-        <button>Calculate</button>
-    </form>
-
-    <div class="hidden" id="output">
-        <h2></h2>
+<h1>When do I go home?</h1>
+<form>
+    <div class="arrival">
+        <label for="arrival">Arrived at: </label>
+        <input id="arrival" type="time" required>
     </div>
+
+    <div class="lunch">
+        <label for="lunch">Lunch Break (minutes): </label>
+        <input id="lunch" type="number" min="0" requried>
+    </div>
+
+    <div class="hoursWorked">
+        <label for="hoursWorked">Hours Worked: </label>
+        <input id="hoursWorked" type="number" min="0" value="8" step="0.01" required>
+    </div>
+
+    <button>Calculate</button>
+</form>
+
+<div class="hidden" id="output">
+    <h2></h2>
+</div>
 </body>
 <script type="text/javascript" src="./calculate.js"></script>
 </html>
