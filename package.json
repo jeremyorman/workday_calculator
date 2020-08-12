@@ -14,9 +14,9 @@
   "author": "Jeremy Orman",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.2.4"
+    "electron": "^7.3.2"
   },
   "devDependencies": {
-    "electron-packager": "^14.1.1"
+    "electron-packager": "^14.2.1"
   }
 }
